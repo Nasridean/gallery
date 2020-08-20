@@ -1,0 +1,58 @@
+.form {
+    background-color: $background;
+    border: 10px dashed darken($color: $background, $amount: 10%);
+    border-radius: 10px;
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    min-width: 280px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    &_empty {
+        position: static;
+    }
+    &__button {
+        &_close {
+            position: absolute;
+            top: 3px;
+            right: 10px;
+        }
+    }
+    &__input {
+        &_text {
+            display: block;
+            margin: auto;
+            margin-top: 6vh;
+      }
+    }
+    &__label {
+        &_input {
+            cursor: pointer;
+            color: blue;
+            &:hover {
+                color: lighten($color: blue, $amount: 10%);
+            }
+            &:active {
+                color: darken($color: $background, $amount: 10%);
+            }
+        }
+    }
+    &__p {
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        font-size: 3rem;
+        @media (min-width: 420px) {
+            margin-top: 40px;
+        }
+        &_second {
+            margin-bottom: 10px;
+        }
+        &_third {
+            margin-top: 0px;
+        }
+    }
+}

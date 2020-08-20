@@ -1,0 +1,12 @@
+.input {
+    &_file {
+        display: none;
+    }
+    &_text {
+        height: 35px;
+        width: 96%;
+        &::placeholder {
+            text-align: center;
+        }
+    }
+}

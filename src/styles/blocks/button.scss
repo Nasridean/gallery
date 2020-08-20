@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
+
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: #fff;
+    vertical-align: bottom;
+} */
+
+.button {
+    background: none;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: initial;
+    &_add {
+        background-color: #fff0f0;
+        border: 2px solid #b18597;
+        border-radius: 999px;
+        font-size: 1.7rem;
+        height: 100px;
+        position: relative;
+        opacity: 0.7;
+        width: 100px;
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            background-color: grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        &::before {
+            height: 1em;
+            width: 0.2em;
+        }
+    
+        &::after {
+            height: 0.2em;
+            width: 1em;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &_close {
+        outline: 0;
+        color: $buttonColor;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover {
+            color: lighten($color: $buttonColor, $amount: 30);
+        }   
+    }
+    &_delete {        
+        letter-spacing: 2px;
+        color: red;
+        font-weight: bold;
+        &:hover {
+            color: lighten($color: brown, $amount: 30);
+        }
+    }
+    &_3d {
+        display: block;
+        margin: auto;
+        margin-top: 4vh;
+        margin-bottom: 10px;
+        padding: 1.25em 2em;
+        border: 2px solid #b18597;
+        border-radius: 0.75em;
+        font-family: inherit;
+        font-weight: 700;
+        color: #382b22;
+        text-transform: uppercase;
+        background: #fff0f0;
+        transform-style: preserve-3d;
+        transition: .15s cubic-bezier(0, 0, .6, 1);
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: #f9c4d2;
+            box-shadow: 0 0 0 2px #b18597, 0 .625em 0 0 #ffe3e2;
+            transform: translate3d(0, .75em, -1em);
+            transition: .15s cubic-bezier(0, 0, .6, 1);
+        }
+        &:hover {
+            background: #ffe9e9;
+            transform: translate(0, .25em);
+            &::before {
+                box-shadow: 0 0 0 2px #b18597, 0 .5em 0 0 #ffe3e2;
+                transform: translate3d(0, .5em, -1em);
+            }
+        }
+        &:active {
+            background: #ffe9e9;
+            transform: translate(0, .75em);
+            &::before {
+                box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+                transform: translate3d(0, 0, -1em);
+            }
+        }
+    }
+    
+}
+
+/*
+.main__button_add {
+    	
+} 
+
+.popup__button_close {
+
+}
+
+.popup__button_delete {
+      
+}
+
+*/

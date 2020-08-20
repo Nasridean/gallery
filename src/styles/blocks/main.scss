@@ -1,0 +1,38 @@
+.main {
+    background-color: $background;
+    align-items: center;
+    justify-content: center;
+    &__container {
+      max-width: 860px;
+      min-width: 320px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      &::after {
+        content: '';
+        flex-grow: 100;
+      }
+    }
+    &__button {
+      &_add {
+        margin: auto;
+      }
+    }
+    &__image {
+      width: 100%;
+      vertical-align: bottom;
+    }
+    &__image-wrapper {
+      background-image: url('https://via.placeholder.com/120');
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 120px;
+      margin: 2px;
+      width: 120px;
+      @media (min-width: 480px) {
+        background-image: url('https://via.placeholder.com/200');
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }

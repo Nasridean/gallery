@@ -1,0 +1,40 @@
+.popup {
+  font-family: initial;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba($background, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  &__inner {
+    background: $background;
+    border: 5px solid darken($color: $background, $amount: 10%);
+    padding: 20px;
+    position: relative;
+    opacity: 1;
+    max-height: 100%;
+    box-sizing: border-box;
+    }
+  &__button {
+    position: absolute;
+    &_close {
+      top: 3px;
+      right: 10px;
+    }
+    &_delete {
+      top: 3px;
+      left: 10px;
+    }
+  }
+}
+
+ 
+ 
+  
+  
