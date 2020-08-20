@@ -15,11 +15,10 @@ class App extends React.Component {
     }
   }
   
-  imageSubmitter = (e) => {
-    e.preventDefault();
-    if (this.state.imageUrl) {
+  imageSubmitter = (imageUrl) => {
+    if (imageUrl) {
       let imageUrlsArray = this.state.imageUrlArray;
-      imageUrlsArray.push(this.state.imageUrl);
+      imageUrlsArray.push(imageUrl);
       this.setState({
         imageUrlArray: imageUrlsArray
       });
@@ -130,6 +129,7 @@ onDrop = (e) => {
         closeForm={this.closeForm}
         imageSubmitter={this.imageSubmitter}
         handleFiles={this.handleFiles}
+        imageSubmitter={this.imageSubmitter}
         isEmpty={this.state.imageUrlArray.length === 0}
         />)}
         {this.state.imageUrlArray.length !== 0 && (
